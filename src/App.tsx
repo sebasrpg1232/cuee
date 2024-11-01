@@ -9,8 +9,8 @@ function App() {
   return (
      //<LoginPage />
     //<RegisterEntityPage/>
-    //<HomePage/>
-    <CrearProyectoPage/>
+    <HomePage/>
+    // <CrearProyectoPage/>
   )
 }
 
