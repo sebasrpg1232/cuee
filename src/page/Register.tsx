@@ -4,8 +4,10 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 
 import background from "/public/medellin_blanco_y_negro-modified.jpg?url"
+import { useNavigate } from 'react-router-dom'
 
 export default function RegisterEntityPage() {
+    const navigate = useNavigate()
   const [entityType, setEntityType] = useState("public")
 
   return (
@@ -112,8 +114,9 @@ export default function RegisterEntityPage() {
 
           <div>
             <Button
-              type="submit"
+              type="button"
               className="w-full bg-gray-200 text-gray-700 font-medium rounded-full py-2 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400"
+              onClick={() => navigate("/login")}
             >
               Registrar Entidad
             </Button>
@@ -121,7 +124,7 @@ export default function RegisterEntityPage() {
         </form>
 
         <div className="mt-4 text-center">
-          <a href="#" className="text-sm font-medium text-gray-700 hover:underline">
+          <a onClick={() => navigate("/login")} className="text-sm font-medium text-gray-700 hover:underline">
             Regresar al inicio
           </a>
         </div>

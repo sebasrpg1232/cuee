@@ -4,8 +4,10 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 
 import imagen from "/public/medellin_blanco_y_negro-modified.jpg?url"
+import { useNavigate } from 'react-router-dom'
 
 export default function LoginPage() {
+  const navigate = useNavigate()
   const [showPassword, setShowPassword] = useState(false)
 
   return (
@@ -64,7 +66,7 @@ export default function LoginPage() {
             </div>
           </div>
           <div>
-            <Button type="submit" className="w-full">
+            <Button type="submit" className="w-full" onClick={()=>navigate("/homepage")}>
               Iniciar Sesión
             </Button>
           </div>

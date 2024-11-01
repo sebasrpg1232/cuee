@@ -1,0 +1,13 @@
+.checkbox-custom {
+    background-color: white;
+    /* Default background color */
+    border: 2px solid gray;
+    /* Default border color */
+}
+
+.checkbox-custom:checked {
+    background-color: black;
+    /* Background color when checked */
+    border: 2px solid black;
+    /* Border color when checked */
+}

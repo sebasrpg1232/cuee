@@ -6,10 +6,11 @@ import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Label } from "@/components/ui/label"
+import { useNavigate } from 'react-router-dom'
 
 export default function CrearProyectoPage() {
   const [activeTab, setActiveTab] = useState('crear')
-
+  const navigate = useNavigate()
   return (
      <div className="min-h-screen bg-gray-50">
       <nav className="w-full bg-white shadow-lg">
@@ -20,7 +21,10 @@ export default function CrearProyectoPage() {
               className={`flex items-center ${
                 activeTab === 'inicio' ? 'bg-white text-black' : 'text-white'
               }`}
-              onClick={() => setActiveTab('inicio')}
+              onClick={() => {
+                              setActiveTab('inicio')
+                              navigate('/homepage')
+                          }}
             >
               <Home className="mr-2 h-4 w-4" />
               Inicio
@@ -30,7 +34,10 @@ export default function CrearProyectoPage() {
               className={`flex items-center ${
                 activeTab === 'crear' ? 'bg-white text-black' : 'text-white'
               }`}
-              onClick={() => setActiveTab('crear')}
+              onClick={() => {
+                setActiveTab('crear')
+                navigate('/crearproyecto')
+              }}
             >
               <Plus className="mr-2 h-4 w-4" />
               Crear Proyecto
@@ -40,7 +47,10 @@ export default function CrearProyectoPage() {
               className={`flex items-center ${
                 activeTab === 'buscar' ? 'bg-white text-black' : 'text-white'
               }`}
-              onClick={() => setActiveTab('buscar')}
+              onClick={() => {
+                setActiveTab('buscar')
+                navigate('/buscarproyecto')
+              }}
             >
               <Search className="mr-2 h-4 w-4" />
               Buscar Proyecto
