@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { Search, Plus, Home, BarChart2, Activity, TrendingUp } from 'lucide-react'
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
+// import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import {
   Line,
@@ -146,8 +146,8 @@ export default function HomePage() {
                     fill="#8884d8"
                     label
                   >
-                    {projectTypes.map((entry, index) => (
-                      <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                    {projectTypes.map((__, index) => (
+                      <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]}  />
                     ))}
                   </Pie>
                   <Tooltip />
