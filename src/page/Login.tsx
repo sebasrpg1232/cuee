@@ -20,7 +20,7 @@ export default function LoginPage() {
          }}>
       <div className="w-full max-w-md p-6 bg-white bg-opacity-80 backdrop-blur-sm rounded-lg shadow-xl mx-4 md:mx-0">
         <div className="text-center mb-8">
-          <h1 className="text-2xl font-bold text-gray-800">Medellin Territorios Inteligentes</h1>
+          <h1 className="text-2xl font-bold text-gray-800">MeTI</h1>
           <p className="text-sm text-gray-600">Plataforma de Gestión de Proyectos</p>
         </div>
         <form className="space-y-6">
